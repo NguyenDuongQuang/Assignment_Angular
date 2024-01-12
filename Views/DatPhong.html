@@ -1,0 +1,107 @@
+<style>
+  h1 {
+    text-align: center;
+    color: rgb(248, 190, 0);
+    font-family: "Times New Roman", Times, serif;
+  }
+</style>
+<div>
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Họ Và Tên</label>
+      <input type="text" class="form-control" ng-model="inputValue.ten" />
+      <p style="color: rgb(228, 18, 18)" ng-if="kiemtra.ten == true">
+        Bạn chưa nhập Họ Tên! (^_^)
+      </p>
+    </div>
+    <br />
+    <!-- ------------------------------------------------------------------------------- -->
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Số Điện Thoại</label>
+      <input type="number" class="form-control" ng-model="inputValue.sdt" />
+      <p style="color: rgb(228, 18, 18)" ng-if="kiemtra.sdt == true">
+        Bạn chưa nhập Số Điện Thoại! (^_^)
+      </p>
+    </div>
+    <!-- ----------------------------------------------------------------------------- -->
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Email</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">@</span>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+          ng-model="inputValue.email" required />
+      </div>
+      <p style="color: rgb(228, 18, 18)" ng-if="kiemtra.email == true">
+        Bạn chưa nhập Email! (^_^)
+      </p>
+    </div>
+    <!-- ---------------------------------------------------------------------------------- -->
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">Số Căn Cước Công Dân</label>
+      <input type="number" class="form-control" id="validationCustom03" ng-model="inputValue.cccd" required />
+      <p style="color: rgb(228, 18, 18)" ng-if="kiemtra.cccd == true">
+        Bạn chưa nhập Số Căn Cước Công Dân! (^_^)
+      </p>
+    </div>
+    <!-- ------------------------------------------------------------------------------- -->
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">Số lượng phòng</label>
+      <input type="number" class="form-control" id="validationCustom03" ng-model="inputValue.so" required />
+      <p style="color: rgb(228, 18, 18)" ng-if="kiemtra.so == true">
+        Bạn chưa nhập Số Lượng Phòng! (^_^)
+      </p>
+    </div>
+    <!-- ------------------------------------------------------------------------------------ -->
+    <div class="col-md-3">
+      <label for="validationCustom05" class="form-label">Ngày nhận phòng</label>
+      <input type="date" class="form-control" id="validationCustom05" ng-model="inputValue.nhan" required />
+      <p style="color: rgb(228, 18, 18)" ng-if="kiemtra.nhan == true">
+        Xin Hãy Chọn Ngày Bắt Đầu Ở! (^_^)
+      </p>
+    </div>
+    <!-- ------------------------------------------------------------------------------ -->
+    <div class="col-md-3">
+      <label for="validationCustom05" class="form-label">Ngày trả phòng</label>
+      <input type="date" class="form-control" id="validationCustom05" ng-model="inputValue.tra" required />
+      <p style="color: rgb(228, 18, 18)" ng-if="kiemtra.tra == true">
+        Xin Hãy Chọn Ngày Trả Phòng! (^_^)
+      </p>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <button class="btn btn-outline-primary" ng-click="onSumbmit()">
+      ĐẶT PHÒNG
+    </button>
+  </form>
+  <hr />
+  <h1>THÔNG TIN</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Họ Và Tên</th>
+        <th scope="col">SĐT</th>
+        <th scope="col">Email</th>
+        <th scope="col">CCCD</th>
+        <th scope="col">Số lượng phòng</th>
+        <th scope="col">Ngày nhận</th>
+        <th scope="col">Ngày trả</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="h in table">
+        <td>{{ h.id }}</td>
+        <td>{{ h.ten }}</td>
+        <td>{{ h.sdt }}</td>
+        <td>{{ h.email }}</td>
+        <td>{{ h.cccd }}</td>
+        <td>{{ h.so }}</td>
+        <td>{{ h.nhan }}</td>
+        <td>{{ h.tra }}</td>
+        <td>
+          <button class="btn btn-primary" ng-click="onEdit(h.id)">Sửa</button>
+          <button class="btn btn-primary" ng-click="onDelete(h.id)">Xóa</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
