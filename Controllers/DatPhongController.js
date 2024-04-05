@@ -5,16 +5,18 @@ window.DatPhongController = function ($scope) {
       ten: "Nguyễn Dương Quang",
       sdt: "0965953837",
       email: "quangndph23153@fpt.edu.vn",
+      gia:"1200000",
       cccd: "001203046924",
       so: "2",
       nhan: "22/02/2022",
       tra: "22/08/2023",
     },
     {
-      id: 1,
+      id: 2,
       ten: "Nguyễn Văn Quang",
       sdt: "0965953837",
       email: "quangnvph23153@fpt.edu.vn",
+      gia:"1300000",
       cccd: "001203046924",
       so: "3",
       nhan: "22/02/2022",
@@ -25,6 +27,7 @@ window.DatPhongController = function ($scope) {
     ten: false,
     sdt: false,
     email: false,
+    gia: false,
     cccd: false,
     so: false,
     nhan: false,
@@ -35,6 +38,7 @@ window.DatPhongController = function ($scope) {
       ten: "",
       sdt: "",
       email: "",
+      gia:"",
       cccd: "",
       so: "",
       nhan: "",
@@ -57,6 +61,10 @@ window.DatPhongController = function ($scope) {
     }
     if (!$scope.inputValue || !$scope.inputValue.email) {
       $scope.kiemtra.email = true;
+      flag = true;
+    }
+    if (!$scope.inputValue || !$scope.inputValue.gia) {
+      $scope.kiemtra.gia = true;
       flag = true;
     }
     if (!$scope.inputValue || !$scope.inputValue.cccd) {
@@ -84,6 +92,7 @@ window.DatPhongController = function ($scope) {
             $scope.table[i].ten = $scope.inputValue.ten;
             $scope.table[i].sdt = $scope.inputValue.sdt;
             $scope.table[i].email = $scope.inputValue.email;
+            $scope.table[i].gia = $scope.inputValue.gia;
             $scope.table[i].cccd = $scope.inputValue.cccd;
             $scope.table[i].so = $scope.inputValue.so;
             $scope.table[i].nhan = $scope.inputValue.nhan;
@@ -101,10 +110,12 @@ window.DatPhongController = function ($scope) {
         ten: $scope.inputValue.ten,
         sdt: $scope.inputValue.sdt,
         email: $scope.inputValue.email,
+        gia: $scope.inputValue.gia,
         cccd: $scope.inputValue.cccd,
         so: $scope.inputValue.so,
         nhan: $scope.inputValue.nhan,
         tra: $scope.inputValue.tra,
+        
       };
       $scope.table.push(newItem);
       $scope.setText();
@@ -116,6 +127,7 @@ window.DatPhongController = function ($scope) {
       ten: "",
       sdt: "",
       email: "",
+      gia:"",
       cccd: "",
       so: "",
       nhan: "",
@@ -126,16 +138,19 @@ window.DatPhongController = function ($scope) {
         editItem.ten = $scope.table[i].ten;
         editItem.sdt = $scope.table[i].sdt;
         editItem.email = $scope.table[i].email;
+        editItem.gia = $scope.table[i].gia;
         editItem.cccd = $scope.table[i].cccd;
         editItem.so = $scope.table[i].so;
         editItem.nhan = $scope.table[i].nhan;
         editItem.tra = $scope.table[i].tra;
+        
       }
     }
     $scope.inputValue = {
       ten: editItem.ten,
       sdt: editItem.sdt,
       email: editItem.email,
+      gia: editItem.gia,
       cccd: editItem.cccd,
       so: editItem.so,
       nhan: editItem.nhan,

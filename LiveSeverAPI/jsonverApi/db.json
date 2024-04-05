@@ -1,12 +1,87 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "DsKh": [
-        { "id": 1, "hoTen": "Duongr", "tuoi": "20" }
-      ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "DsKh": [
+    {
+      "id": 1,
+      "hoTen": "Quang",
+      "tuoi": "20"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "student": [
+    {
+      "ten": "ABC",
+      "tuoi": "19",
+      "lop": "SD123"
+    },
+    {
+      "ten": "ABC",
+      "tuoi": "19",
+      "lop": "SD123"
+    },
+    {
+      "ten": "ABC",
+      "tuoi": "19",
+      "lop": "SD123"
+    },
+    {
+      "ten": "ABC",
+      "tuoi": "19",
+      "lop": "SD123"
+    },
+    {
+      "ten": "ABC",
+      "tuoi": "19",
+      "lop": "SD123"
+    }
+  ],
+  "NhanVien": [
+    {
+      "id": "1",
+      "hoTen": "Nguyễn Văn A",
+      "sdt": "0915111111",
+      "email": "abc@gmail.com",
+      "chucVu": "Trưởng Phòng",
+      "ngaySinh": "11-07-2002"
+    },
+    {
+      "id": "2",
+      "hoTen": "Nguyễn Văn C",
+      "sdt": "091234567",
+      "email": "abc@gmail.com",
+      "chucVu": "Nhân Viên",
+      "ngaySinh": "11-07-2004"
+    },
+    {
+      "id": "3",
+      "hoTen": "Nguyễn Văn B",
+      "sdt": "0987654321",
+      "email": "synm3@gmail.com",
+      "chucVu": "Giam Đốc",
+      "ngaySinh": "22-12-1997"
+    },
+    {
+      "id": "5",
+      "hoTen": "Quang",
+      "sdt": 965953837,
+      "email": "abc@gmail.com",
+      "chucVu": "Trưởng Phòng",
+      "ngaySinh": "04/03/2003"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}
